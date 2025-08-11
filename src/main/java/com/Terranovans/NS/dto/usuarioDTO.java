@@ -1,0 +1,33 @@
+package com.Terranovans.NS.dto;
+
+import jakarta.persistence.Column;
+import lombok.*;
+
+import java.time.LocalDateTime;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class usuarioDTO {
+
+    private String cedula;
+
+    private String nombres;
+
+    private String apellidos;
+
+    private String email;
+
+    private String contrasena;
+
+    private LocalDateTime nacimiento;
+
+    private Integer rol;
+
+    private String createdAt;
+
+    private String updatedAt;
+
+}
