@@ -38,5 +38,11 @@ public class producto {
     @Column(name = "ubicacionProducto", length = 200, nullable = false)
     private String ubicacionProducto;
 
+    @ManyToOne
+    @JoinColumn(name = "cedula", unique = true)
+    // Relación con la entidad Producto
+    private usuario cedula;
+
+
 
 }

@@ -31,4 +31,9 @@ public class finca {
     @Column(name = "numeroBanos", length = 20)
     private String numeroBanos;
 
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    // Relación con la entidad Producto
+    private producto idProducto;
+
 }

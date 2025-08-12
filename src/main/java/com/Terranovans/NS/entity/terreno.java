@@ -37,5 +37,10 @@ public class terreno {
 
     @Column(name = "cercado", length = 2, nullable = false)
     private Boolean cercado;
+
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    // Relación con la entidad Producto
+    private producto idProducto;
 }
 

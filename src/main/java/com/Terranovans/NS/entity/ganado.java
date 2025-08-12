@@ -37,6 +37,11 @@ public class ganado {
     @Column(name = "tipoGanado", length = 50, nullable = false)
     private String tipoGanado;
 
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    // Relación con la entidad Producto
+    private producto idProducto;
+
     @Column(name = "gestacionGanado", length = 7, nullable = false)
     private Boolean GestacionGanado;
 

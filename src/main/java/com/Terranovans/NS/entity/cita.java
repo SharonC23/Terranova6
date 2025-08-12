@@ -26,4 +26,14 @@ public class cita {
 
     @Column(name = "horaCita", nullable = false)
     private LocalDateTime horaCita;
+
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    // Relación con la entidad Producto
+    private producto idProducto;
+
+    @ManyToOne
+    @JoinColumn(name = "cedula", unique = true)
+    // Relación con la entidad Usuario
+    private usuario cedula;
 }

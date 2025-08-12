@@ -34,5 +34,15 @@ public class venta {
     @Column(name = "gananciaNeta", nullable = false)
     private BigInteger gananciaNeta;
 
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    // Relación con la entidad Producto
+    private producto idProducto;
+
+    @ManyToOne
+    @JoinColumn(name = "cedula", unique = true)
+    // Relación con la entidad Usuario
+    private usuario cedula;
+
 }
 
