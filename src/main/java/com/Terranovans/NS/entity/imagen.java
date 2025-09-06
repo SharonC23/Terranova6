@@ -18,4 +18,8 @@ public class imagen {
     @Column(name = "nombreArchivo", length = 255, unique = true)
     private String nombreArchivo;
 
+    @ManyToOne
+    @JoinColumn(name = "idProducto", nullable = false)
+    private producto idProducto;
+
 }

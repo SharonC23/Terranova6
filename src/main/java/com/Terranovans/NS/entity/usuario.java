@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @Setter
 public class usuario {
 
+
     @Id
     @Column(name = "cedula", length = 20, unique = true)
     private String cedula;
@@ -34,14 +35,5 @@ public class usuario {
 
     @Column(name = "nacimiento", nullable = false)
     private LocalDateTime nacimiento;
-
-    @Column(name = "rol", nullable = false)
-    private Integer rol;
-
-    @Column(name= "created_at", nullable = false, updatable = false)
-    private String createdAt;
-
-    @Column(name= "updated_at", nullable = false)
-    private String updatedAt;
 
 }

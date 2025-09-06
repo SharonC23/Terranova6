@@ -30,9 +30,9 @@ public class ganado {
     @Column(name = "edadGanado", nullable = false)
     private Integer edadGanado;
 
-    @Column(name = "sexoGanado", length = 6, nullable = false)
+    @Column(name = "Genero", length = 6, nullable = false)
     @Enumerated(EnumType.STRING)
-    private EnumType sexo;
+    private EnumType Gereno;
 
     @Column(name = "tipoGanado", length = 50, nullable = false)
     private String tipoGanado;
@@ -42,8 +42,8 @@ public class ganado {
     // Relación con la entidad Producto
     private producto idProducto;
 
-    @Column(name = "gestacionGanado", length = 7, nullable = false)
-    private Boolean GestacionGanado;
+    @Column(name = "preñez", length = 7, nullable = false)
+    private Boolean preñez;
 
     @Column(name = "estadoSanitario", length = 50, nullable = false)
     private String estadoSaniario;

@@ -22,8 +22,8 @@ public class finca {
     @Column(name = "espacioDisponible", length = 30, nullable = false)
     private String espacioDisponible;
 
-    @Column(name = "estratoF", nullable = false)
-    private Integer estadistica;
+    @Column(name = "estrato", nullable = false)
+    private Integer estrato;
 
     @Column(name = "numeroHabitaciones", nullable = false)
     private Integer numeroHabitaciones;

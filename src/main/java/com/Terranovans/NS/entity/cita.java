@@ -28,6 +28,11 @@ public class cita {
     private LocalDateTime horaCita;
 
     @ManyToOne
+    @JoinColumn (name = "idDisponibilidad", nullable = false)
+    // Relación con la entidad Disponibilidad
+    private disponibilidad idDisponibilidad;
+
+    @ManyToOne
     @JoinColumn(name = "idProducto", nullable = false)
     // Relación con la entidad Producto
     private producto idProducto;

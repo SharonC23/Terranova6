@@ -19,12 +19,17 @@ public class notificacion {
     private String mensajeNotificacion;
 
     @Column(name = "fechaNotification", nullable = false)
-    private LocalDateTime fechaNotification; // Fecha y hora de la notificación
+    private LocalDateTime fechaNotification;
 
     @Column(name = "tipo", length = 50)
     private String tipo;
 
     @Column(name = "leida")
     private Boolean leida;
+
+    @ManyToOne
+    @JoinColumn(name = "cedula", nullable = false)
+    private usuario cedula;
+
 
 }

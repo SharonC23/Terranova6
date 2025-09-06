@@ -2,7 +2,6 @@ package com.Terranovans.NS.dto;
 
 
 import lombok.*;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

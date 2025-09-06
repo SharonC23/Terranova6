@@ -14,4 +14,8 @@ public class calendario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idCalendario")
     private Long idCalendario;
+
+    @ManyToOne
+    @JoinColumn(name = "idUsuario", nullable = false)
+    private usuario idUsuario;
 }

@@ -24,10 +24,5 @@ public class usuarioDTO {
 
     private LocalDateTime nacimiento;
 
-    private Integer rol;
-
-    private String createdAt;
-
-    private String updatedAt;
 
 }

@@ -19,7 +19,7 @@ public class fincaDTO {
 
     private String espacioDisponible;
 
-    private Integer estadistica;
+    private Integer estrato;
 
     private Integer numeroHabitaciones;
 

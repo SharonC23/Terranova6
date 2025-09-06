@@ -25,4 +25,8 @@ public class disponibilidad {
     @Column(name = "disponible", nullable = false)
     private Boolean disponible;
 
+    @ManyToOne
+    @JoinColumn(name = "idCalendario", nullable = false)
+    private calendario idCalendario;
+
 }

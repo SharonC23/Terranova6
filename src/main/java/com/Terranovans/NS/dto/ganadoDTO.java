@@ -16,17 +16,17 @@ public class ganadoDTO {
 
     private Long idGanado;
 
-    private String nombreGanado;
+    private String razaGanado;
 
     private BigDecimal pesoGanado;
 
     private Integer edadGanado;
 
-    private EnumType sexo;
+    private EnumType genero;
 
     private String tipoGanado;
 
-    private Boolean GestacionGanado;
+    private Boolean peñez;
 
     private String estadoSaniario;
 
