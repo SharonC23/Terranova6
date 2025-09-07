@@ -3,19 +3,18 @@ package com.Terranovans.NS.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Entity
-@Table(name = "Calendarios")
+@Table(name = "calendario")
 @Data
 public class calendario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idCalendario")
+    @Column(name = "id_calendario")
     private Long idCalendario;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario", nullable = false)
-    private usuario idUsuario;
+    @JoinColumn(name = "cedula", referencedColumnName = "cedula")  // FK correcta
+    private usuario usuario;  // Relación con usuario
 }
+

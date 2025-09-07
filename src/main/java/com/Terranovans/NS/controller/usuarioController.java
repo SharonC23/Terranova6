@@ -37,13 +37,13 @@ public class usuarioController {
     }
 
     @PutMapping("/update/{cedula}")
-    public ResponseEntity<usuarioDTO> updateUsuario(@PathVariable Long cedula, @RequestBody usuarioDTO usuarioDTO) {
+    public ResponseEntity<usuarioDTO> updateUsuario(@PathVariable String cedula, @RequestBody usuarioDTO usuarioDTO) {
         usuarioService.updateUser(cedula, usuarioDTO);
         return ResponseEntity.ok(usuarioDTO);
     }
 
     @DeleteMapping("/delete/{cedula}")
-    public ResponseEntity<String> deleteUsuario(@PathVariable Long cedula) {
+    public ResponseEntity<String> deleteUsuario(@PathVariable String cedula) {
         usuarioService.deleteUser(cedula);
         return ResponseEntity.noContent().build();
     }

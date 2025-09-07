@@ -14,9 +14,9 @@ public interface usuarioService {
     //UserDTO authenticateUser(String email, String password);
 
     usuarioDTO createUser(usuarioDTO usuarioDTO);
-    usuarioDTO getUserById(Long cedula);
-    usuarioDTO updateUser(Long cedula, usuarioDTO usuarioDTO);
-    boolean deleteUser(Long cedula);
+    usuarioDTO getUserById(String cedula);
+    usuarioDTO updateUser(String cedula, usuarioDTO usuarioDTO);
+    boolean deleteUser(String cedula);
     usuarioDTO authenticateUser(String email, String password);
 
 

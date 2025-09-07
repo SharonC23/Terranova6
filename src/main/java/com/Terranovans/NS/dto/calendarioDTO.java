@@ -1,15 +1,14 @@
 package com.Terranovans.NS.dto;
 
-
 import lombok.*;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-
 public class calendarioDTO {
-
     private Long idCalendario;
-
+    private String cedula; // String para coincidir con la BD
 }
+
+
+

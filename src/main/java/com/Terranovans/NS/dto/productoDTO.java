@@ -15,7 +15,7 @@ public class productoDTO {
 
     private Long idProducto;
 
-    private Long cedula;
+    private String cedula;
 
     private String nombreProducto;
 

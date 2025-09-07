@@ -45,14 +45,14 @@ public class usuarioServiceImpl implements usuarioService {
     }
 
     @Override
-    public usuarioDTO getUserById(Long cedula) {
+    public usuarioDTO getUserById(String cedula) {
         usuario usuario = usuarioRepository.findById(cedula)
                 .orElseThrow(() -> new CustomException("Usuario no encontrado con cédula: " + cedula));
         return modelMapper.map(usuario, usuarioDTO.class);
     }
 
     @Override
-    public usuarioDTO updateUser(Long cedula, usuarioDTO usuarioDTO) {
+    public usuarioDTO updateUser(String cedula, usuarioDTO usuarioDTO) {
         usuario usuario = usuarioRepository.findById(cedula)
                 .orElseThrow(()-> new CustomException("Usuario no encontrado con cédula: " + cedula));
 
@@ -64,7 +64,7 @@ public class usuarioServiceImpl implements usuarioService {
     }
 
     @Override
-    public boolean deleteUser(Long cedula) {
+    public boolean deleteUser(String cedula) {
         if(!usuarioRepository.existsById(cedula)) {
             throw new CustomException("Usuario no encontrado con cédula: " + cedula);
         }
