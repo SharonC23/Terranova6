@@ -12,5 +12,8 @@ public class imagenDTO {
 
     private Long idImagen;
 
+    private Long idProducto;
+
     private String nombreArchivo;
 }
+

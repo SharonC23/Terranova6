@@ -14,6 +14,8 @@ public class notificacionDTO {
 
     private Long idNotification;
 
+    private String cedula;
+
     private String mensajeNotificacion;
 
     private LocalDateTime fechaNotification;

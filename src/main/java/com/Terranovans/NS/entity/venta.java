@@ -3,7 +3,6 @@ package com.Terranovans.NS.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 
@@ -22,14 +21,14 @@ public class venta {
 
     @Column(name = "estado", length = 30, nullable = false)
     @Enumerated(EnumType.STRING)
-    private EnumType estado;
+    private estado estado;
 
     @Column(name = "nota", length = 200, nullable = true)
     private String nota;
 
     @Column(name = "metodoPago", length = 50, nullable = false)
     @Enumerated(EnumType.STRING)
-    private EnumType metodoPago;
+    private metodoPago metodoPago;
 
     @Column(name = "gananciaNeta", nullable = false)
     private BigInteger gananciaNeta;
@@ -40,7 +39,7 @@ public class venta {
     private producto idProducto;
 
     @ManyToOne
-    @JoinColumn(name = "cedula", unique = true)
+    @JoinColumn(name = "cedula")
     // Relación con la entidad Usuario
     private usuario cedula;
 

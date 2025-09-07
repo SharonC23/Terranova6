@@ -1,5 +1,7 @@
 package com.Terranovans.NS.dto;
 
+import com.Terranovans.NS.entity.acceso;
+import com.Terranovans.NS.entity.tipoTerreno;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -16,13 +18,15 @@ public class terrenoDTO {
 
     private Long idTerreno;
 
+    private Long idproducto;
+
     private BigDecimal tamanoTerreno;
 
-    private EnumType tipoTerreno;
+    private tipoTerreno tipoTerreno;
 
     private String topografiaTerreno;
 
-    private EnumType acceso;
+    private acceso acceso;
 
     private String servicios;
 

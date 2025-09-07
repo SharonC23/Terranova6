@@ -18,7 +18,7 @@ public class notificacion {
     @Column(name = "mensajeNotificacion", length = 300, nullable = false)
     private String mensajeNotificacion;
 
-    @Column(name = "fechaNotification", nullable = false)
+    @Column(nullable = true)
     private LocalDateTime fechaNotification;
 
     @Column(name = "tipo", length = 50)

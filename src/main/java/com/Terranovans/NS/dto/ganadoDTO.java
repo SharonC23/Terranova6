@@ -1,5 +1,6 @@
 package com.Terranovans.NS.dto;
 
+import com.Terranovans.NS.entity.GeneroGanado;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -18,15 +19,17 @@ public class ganadoDTO {
 
     private String razaGanado;
 
+    private Long idproducto;
+
     private BigDecimal pesoGanado;
 
     private Integer edadGanado;
 
-    private EnumType genero;
+    private GeneroGanado genero;
 
     private String tipoGanado;
 
-    private Boolean peñez;
+    private Boolean peniez;
 
     private String estadoSaniario;
 

@@ -18,16 +18,16 @@ public class terreno {
     @Column(name = "tamanoTerreno", nullable = false)
     private BigDecimal tamanoTerreno;
 
-    @Column(name = "tipoTerreno", length = 45, nullable = false)
     @Enumerated(EnumType.STRING)
-    private EnumType tipoTerreno;
+    @Column(name = "tipoTerreno", nullable = false)
+    private tipoTerreno tipoTerreno;
 
     @Column(name = "topografiaTerreno", length = 45, nullable = false)
     private String topografiaTerreno;
 
-    @Column(name = "acceso", length = 45, nullable = false)
     @Enumerated(EnumType.STRING)
-    private EnumType acceso;
+    @Column(name = "acceso", nullable = false)
+    private acceso acceso;
 
     @Column(name = "servicios", length = 500, nullable = false)
     private String servicios;
@@ -35,7 +35,7 @@ public class terreno {
     @Column(name = "usoActual", length = 45, nullable = false)
     private String usoActual;
 
-    @Column(name = "cercado", length = 2, nullable = false)
+    @Column(name = "cercado", nullable = false)
     private Boolean cercado;
 
     @ManyToOne

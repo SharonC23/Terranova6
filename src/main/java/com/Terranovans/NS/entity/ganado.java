@@ -21,8 +21,8 @@ public class ganado {
     @Column(name = "idGanado")
     private Long idGanado;
 
-    @Column(name = "razaGanado", length = 50, nullable = false)
-    private String nombreGanado;
+    @Column(name = "razaGanado", length = 50)
+    private String razaGanado;
 
     @Column(name = "pesoGanado", nullable = false)
     private BigDecimal pesoGanado;
@@ -30,20 +30,19 @@ public class ganado {
     @Column(name = "edadGanado", nullable = false)
     private Integer edadGanado;
 
-    @Column(name = "Genero", length = 6, nullable = false)
+    @Column(name = "Genero", length = 6)
     @Enumerated(EnumType.STRING)
-    private EnumType Gereno;
+    private GeneroGanado gereno;
 
     @Column(name = "tipoGanado", length = 50, nullable = false)
     private String tipoGanado;
 
-    @ManyToOne
-    @JoinColumn(name = "idProducto", nullable = false)
-    // Relación con la entidad Producto
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_producto", nullable = false)
     private producto idProducto;
 
-    @Column(name = "preñez", length = 7, nullable = false)
-    private Boolean preñez;
+    @Column(name = "preniez", length = 7)
+    private Boolean preniez;
 
     @Column(name = "estadoSanitario", length = 50, nullable = false)
     private String estadoSaniario;
