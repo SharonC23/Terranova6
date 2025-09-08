@@ -1,8 +1,7 @@
 package com.Terranovans.NS.dto;
 
-import jakarta.persistence.Column;
-import lombok.*;
 
+import lombok.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -11,14 +10,13 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class citaDTO {
-
     private Long idCita;
-
     private LocalDateTime fechaCita;
-
     private String estadoCita;
-
     private String ubicacionCita;
-
     private LocalDateTime horaCita;
+    private Long idDisponibilidad;
+    private Long idProducto;
+    private String cedula;
 }
+

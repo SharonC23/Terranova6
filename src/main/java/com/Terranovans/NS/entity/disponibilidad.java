@@ -1,32 +1,31 @@
 package com.Terranovans.NS.entity;
 
-import jakarta.persistence.*;
-import lombok.Data;
 
+
+import jakarta.persistence.*;
+import lombok.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "Disponibilidades")
+@Table(name = "disponibilidad")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class disponibilidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idDisponibilidad")
     private Long idDisponibilidad;
 
-    @Column(name = "fecha", nullable = false)
     private LocalDateTime fecha;
-
-    @Column(name = "hora", nullable = false)
     private LocalTime hora;
-
-    @Column(name = "disponible", nullable = false)
     private Boolean disponible;
 
     @ManyToOne
-    @JoinColumn(name = "idCalendario", nullable = false)
-    private calendario idCalendario;
-
+    @JoinColumn(name = "id_calendario", nullable = false)
+    private calendario calendario;
 }
+

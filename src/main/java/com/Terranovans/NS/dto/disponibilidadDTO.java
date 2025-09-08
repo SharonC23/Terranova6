@@ -1,8 +1,8 @@
 package com.Terranovans.NS.dto;
 
-import jakarta.persistence.Column;
-import lombok.*;
 
+
+import lombok.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
@@ -11,14 +11,11 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @Getter
 @Setter
-
 public class disponibilidadDTO {
-
     private Long idDisponibilidad;
-
     private LocalDateTime fecha;
-
     private LocalTime hora;
-
     private Boolean disponible;
+    private Long idCalendario;
 }
+

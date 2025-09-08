@@ -1,14 +1,11 @@
 package com.Terranovans.NS.entity;
 
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
-@Table(name ="favoritos")
+@Table(name = "favoritos")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,11 +17,11 @@ public class favoritos {
     private Long id_favorito;
 
     @ManyToOne
-    @JoinColumn (name = "cedula_usuario", insertable = false, updatable = false)
+    @JoinColumn(name = "cedula", referencedColumnName = "cedula", nullable = false)
     private usuario usuario;
 
     @ManyToOne
-    @JoinColumn (name = "id_producto", insertable = false, updatable = false)
+    @JoinColumn(name = "idProducto", referencedColumnName = "idProducto", nullable = false)
     private producto producto;
-
 }
+
