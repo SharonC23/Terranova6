@@ -20,7 +20,7 @@ public class usuarioDTO {
 
     private String email;
 
-    private String contrasena;
+    private String password;
 
     private LocalDateTime nacimiento;
 

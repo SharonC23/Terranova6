@@ -30,8 +30,8 @@ public class usuario {
     @Column(name = "email", length = 45, unique = true, nullable = false)
     private String email;
 
-    @Column(name = "contrasena", length = 100, nullable = false)
-    private String contrasena;
+    @Column(name = "password", length = 100, nullable = false)
+    private String password;
 
     @Column(name = "nacimiento", nullable = false)
     private LocalDateTime nacimiento;

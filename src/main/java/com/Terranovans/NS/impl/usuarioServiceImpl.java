@@ -76,4 +76,9 @@ public class usuarioServiceImpl implements usuarioService {
     public usuarioDTO authenticateUser(String email, String password) {
         return null;
     }
+
+    @Override
+    public boolean usuarioExiste(String cedula) {
+        return false;
+    }
 }

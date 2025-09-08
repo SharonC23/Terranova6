@@ -20,6 +20,5 @@ public interface usuarioService {
     usuarioDTO authenticateUser(String email, String password);
 
 
-
-
+    boolean usuarioExiste(String cedula);
 }
