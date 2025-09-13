@@ -18,7 +18,7 @@ public class favoritos {
 
     @ManyToOne
     @JoinColumn(name = "cedula", referencedColumnName = "cedula", nullable = false)
-    private usuario usuario;
+    private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "idProducto", referencedColumnName = "idProducto", nullable = false)

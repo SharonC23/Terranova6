@@ -41,7 +41,7 @@ public class venta {
     @ManyToOne
     @JoinColumn(name = "cedula")
     // Relación con la entidad Usuario
-    private usuario cedula;
+    private Usuario cedula;
 
 }
 

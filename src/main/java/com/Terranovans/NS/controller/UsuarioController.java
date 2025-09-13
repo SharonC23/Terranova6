@@ -1,9 +1,12 @@
 package com.Terranovans.NS.controller;
 
 
+import com.Terranovans.NS.dto.ProductoDTO;
 import com.Terranovans.NS.dto.usuarioDTO;
-import com.Terranovans.NS.repository.usuarioRepository;
-import com.Terranovans.NS.service.usuarioService;
+import com.Terranovans.NS.entity.Usuario;
+import com.Terranovans.NS.repository.UsuarioRepository;
+import com.Terranovans.NS.service.ProductoService;
+import com.Terranovans.NS.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -18,25 +21,47 @@ import java.util.List;
 public class UsuarioController {
 
     @Autowired
-    private usuarioRepository usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
-    private final usuarioService usuarioService;
+    private final UsuarioService usuarioService;
+    private final ProductoService productoService;
 
-    public UsuarioController(usuarioService usuarioService) {
+    public UsuarioController(UsuarioService usuarioService, ProductoService productoService) {
         this.usuarioService = usuarioService;
+        this.productoService = productoService;
     }
 
     // Página principal
-    @GetMapping("/")
-    public String index(Model model, Authentication authentication) {
-        model.addAttribute("usuario", authentication != null ? authentication.getName() : "Invitado");
-        return "index"; // index.html en templates
+    @GetMapping("/usuarios/index")
+    public String indexUsuarios(Model model, Authentication authentication) {
+        // ✅ obtener el email del usuario autenticado
+        String email = authentication.getName();
+
+        // ✅ cargar el usuario desde la BD
+        Usuario usuario = usuarioService.findByEmail(email);
+
+        // ✅ obtener lista de productos disponibles
+        List<ProductoDTO> productos = ProductoService.findAllDTO();
+
+        // ✅ agregar atributos al modelo
+        model.addAttribute("usuario", usuario);
+        model.addAttribute("listaProductos", productos);
+        model.addAttribute("puedeComprar", true);
+        model.addAttribute("puedeVender", true);
+
+        // ✅ redirigir a la vista index
+        return "usuarios/index";
+    }
+
+    @GetMapping("/user/dashboard")
+    public String dashboard() {
+        return "user/dashboard"; // 👈 apunta a la plantilla user/dashboard.html
     }
 
     // Página de login
     @GetMapping("/login")
     public String login() {
-        return "login"; // login.html en templates
+        return "login"; // busca templates/login.html
     }
 
     // Página de registro

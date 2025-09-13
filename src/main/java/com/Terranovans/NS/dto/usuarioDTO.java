@@ -25,4 +25,6 @@ public class usuarioDTO {
     private LocalDateTime nacimiento;
 
 
+    public usuarioDTO(String cedula, String nombres, String apellidos, String email, String password) {
+    }
 }

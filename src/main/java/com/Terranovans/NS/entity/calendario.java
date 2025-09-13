@@ -18,7 +18,7 @@ public class calendario {
 
     @ManyToOne
     @JoinColumn(name = "cedula", referencedColumnName = "cedula")  // FK correcta
-    private usuario usuario;  // Relación con usuario
+    private Usuario usuario;  // Relación con usuario
 
     @OneToMany(mappedBy = "calendario", cascade = CascadeType.ALL)
     private List<disponibilidad> disponibilidades = new ArrayList<>();

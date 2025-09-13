@@ -1,0 +1,32 @@
+package com.Terranovans.NS.dto;
+
+import lombok.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class ProductoDTO {
+
+    private Long idProducto;
+
+    private String cedula;
+
+    private String nombreProducto;
+
+    private String tipoProducto;
+
+    private BigDecimal precioProducto;
+
+    private String descripcion;
+
+    private String estado;
+
+    private LocalDateTime fechaPublicacion;
+
+    private String ubicacionProducto;
+}

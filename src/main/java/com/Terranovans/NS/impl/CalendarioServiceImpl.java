@@ -2,9 +2,9 @@ package com.Terranovans.NS.impl;
 
 import com.Terranovans.NS.dto.calendarioDTO;
 import com.Terranovans.NS.entity.calendario;
-import com.Terranovans.NS.entity.usuario;
+import com.Terranovans.NS.entity.Usuario;
 import com.Terranovans.NS.repository.CalendarioRepository;
-import com.Terranovans.NS.repository.usuarioRepository;
+import com.Terranovans.NS.repository.UsuarioRepository;
 import com.Terranovans.NS.service.CalendarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +18,11 @@ public class CalendarioServiceImpl implements CalendarioService {
     private CalendarioRepository calendarioRepository;
 
     @Autowired
-    private usuarioRepository usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
     @Override
     public calendarioDTO createCalendario(calendarioDTO calendarioDTO) {
-        usuario user = usuarioRepository.findById(calendarioDTO.getCedula())
+        Usuario user = usuarioRepository.findById(calendarioDTO.getCedula())
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
         calendario cal = new calendario();
@@ -46,7 +46,7 @@ public class CalendarioServiceImpl implements CalendarioService {
         calendario cal = calendarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Calendario no encontrado"));
 
-        usuario user = usuarioRepository.findById(calendarioDTO.getCedula())
+        Usuario user = usuarioRepository.findById(calendarioDTO.getCedula())
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
         cal.setUsuario(user);

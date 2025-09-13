@@ -1,7 +1,7 @@
 package com.Terranovans.NS.service;
 
 
-import com.Terranovans.NS.dto.productoDTO;
+import com.Terranovans.NS.dto.ProductoDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,11 +9,15 @@ import java.util.List;
 @Service
 public interface ProductoService {
 
-    List<productoDTO> getAllProducts();
+    static List<ProductoDTO> findAllDTO() {
+        return null;
+    }
 
-    productoDTO createProduct(productoDTO productoDTO);
-    productoDTO getProductById(Long idProducto);
-    productoDTO updateProduct(Long idProducto, productoDTO productoDTO);
+    List<ProductoDTO> getAllProducts();
+
+    ProductoDTO createProduct(ProductoDTO productoDTO);
+    ProductoDTO getProductById(Long idProducto);
+    ProductoDTO updateProduct(Long idProducto, ProductoDTO productoDTO);
     boolean deleteProduct(Long idProducto);
 
 }

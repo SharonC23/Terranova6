@@ -29,7 +29,7 @@ public class notificacion {
 
     @ManyToOne
     @JoinColumn(name = "cedula", nullable = false)
-    private usuario cedula;
+    private Usuario cedula;
 
 
 }
